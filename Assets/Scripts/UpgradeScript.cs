@@ -3,32 +3,46 @@ using UnityEngine;
 
 public class UpgradeScript : MonoBehaviour
 {
-    public int upgradeCost;
+    public int upgradeCostFireRate;
+    public int upgradeCostHealth;
+    public int upgradeCostDamage;
     public float fireRateReduction = 0.1f;
-    public float healthIncrease;
+    public float healthIncrease = 10f;
 
+
+    
     public void ApplyUpgradeFireRate()
     {
-        if (MoneyManager.money >= upgradeCost)
+        if (MoneyManager.money >= upgradeCostFireRate)
         {
             PlayerManager.fireRate -= fireRateReduction;
-            MoneyManager.money -= upgradeCost;
+            MoneyManager.money -= upgradeCostFireRate;
+            upgradeCostFireRate += 10;
         }
+        
+
     }
     public void ApplyUpgradeHealth()
     {
-        if (MoneyManager.money >= upgradeCost)
+        if (MoneyManager.money >= upgradeCostHealth)
         {
             PlayerManager.health += healthIncrease;
-            MoneyManager.money -= upgradeCost;
+            MoneyManager.money -= upgradeCostHealth;
+            upgradeCostHealth += 10;
         }
+        
     }
+    
     public void UpgradePlayerDamage()
     {
-        if (MoneyManager.money >= upgradeCost)
+        if (MoneyManager.money >= upgradeCostDamage)
         {
-            
-            MoneyManager.money -= upgradeCost;
+            PlayerManager.gundamage +=1;
+            MoneyManager.money -= upgradeCostDamage;
+            upgradeCostDamage += 10;
         }
+      
     }
+
+
 }
