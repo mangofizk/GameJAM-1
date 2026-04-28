@@ -176,6 +176,7 @@ public class UpgradeScript : MonoBehaviour
         }
       
     }
+    /*
     public void upgradeLuck()
     {
         if (MoneyManager.money >= upgradeCostLLuck)
@@ -191,8 +192,9 @@ public class UpgradeScript : MonoBehaviour
                 upgradeButton.interactable = false;
             }
         }
+    
     }
-
+*/
 
 
 
