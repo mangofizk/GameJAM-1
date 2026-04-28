@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public static int gundamage;
     private float timer;
 
+    public static float criticalChance = 10;
 
     [SerializeField] private int startingHealth;
     public static float health;
@@ -61,6 +62,11 @@ public class PlayerManager : MonoBehaviour
         }
 
         nearestEnemy.GetComponent<enemyManager>().dealdamage(gundamage);
+        int roll = Random.Range(0, 100);
+        if (roll < criticalChance)
+        {
+            MoneyManager.money += 10;
+        }
     }
 
     public void takeDamage(int damage)

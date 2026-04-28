@@ -38,4 +38,5 @@ public class MoneyManager : MonoBehaviour
         money -= spent;
         changeText();
     }
+    
 }
