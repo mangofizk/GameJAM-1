@@ -4,14 +4,18 @@ using UnityEngine.UI;
 
 public class UpgradeScript : MonoBehaviour
 {
-    public int upgradeCostFireRate = 5;
-    public int upgradeCostHealth = 5;
-    public int upgradeCostDamage = 5;
-    public int upgradeCostLLuck = 10;
-    public int upgradeCostMoneyIncreaseRate = 20;
+    public static int upgradeCostFireRate = 5;
+    public static int upgradeCostHealth = 5;
+    public static int upgradeCostDamage = 5;
+    public static int upgradeCostLLuck = 10;
+    public static int upgradeCostMoneyIncreaseRate = 20;
     public float fireRateReduction = 0.1f;
     public float healthIncrease = 10f;
-    public Button upgradeButton;
+    public Button upgradeButtonFireRate;
+    public Button upgradeButtonHealth;
+    public Button upgradeButtonDamage;
+    public Button upgradeButtonMoneyIncreaseRate;
+    public Button upgradeButtonLuck;
     private int upgradeCountFireRate = 0;
     private int upgradeCountHealth = 0;
     private int upgradeCountDamage = 0;
@@ -21,18 +25,11 @@ public class UpgradeScript : MonoBehaviour
     {
         if (MoneyManager.money >= upgradeCostFireRate)
         {
-            upgradeButton.interactable = true;
+            
             PlayerManager.fireRate -= fireRateReduction;
             MoneyManager.money -= upgradeCostFireRate;
-            upgradeCostFireRate += 10;
+            upgradeCostFireRate += 5;
             upgradeCountFireRate++; 
-        }
-        else
-        {
-            if (upgradeButton != null)
-            {
-                upgradeButton.interactable = false;
-            }
         }
         switch (upgradeCountFireRate)
         {
@@ -68,19 +65,13 @@ public class UpgradeScript : MonoBehaviour
     {
         if (MoneyManager.money >= upgradeCostHealth)
         {
-            upgradeButton.interactable = true;
+            
             PlayerManager.health += healthIncrease;
             MoneyManager.money -= upgradeCostHealth;
-            upgradeCostHealth += 10;
+            upgradeCostHealth += 5;
             upgradeCountHealth++;
         }
-        else
-        {
-            if (upgradeButton != null)
-            {
-                upgradeButton.interactable = false;
-            }
-        }
+       
         switch (upgradeCountHealth)
         {
             case 2 :
@@ -111,23 +102,17 @@ public class UpgradeScript : MonoBehaviour
         
     }
     
-    public void UpgradePlayerDamage()
+    public void ApplyUpgradePlayerDamage()
     {
         if (MoneyManager.money >= upgradeCostDamage)
         {
-            upgradeButton.interactable = true;
+            
             PlayerManager.gundamage +=1;
             MoneyManager.money -= upgradeCostDamage;
             upgradeCostDamage += 10;
             upgradeCountDamage++;
         }
-        else
-        {
-            if (upgradeButton != null)
-            {
-                upgradeButton.interactable = false;
-            }
-        }
+       
         switch (upgradeCountDamage)
         {
             case 2 :
@@ -160,41 +145,35 @@ public class UpgradeScript : MonoBehaviour
     {
         if (MoneyManager.money >= upgradeCostMoneyIncreaseRate)
         {
-            upgradeButton.interactable = true;
+            
             MoneyManager.moneyIncreaseRate -= 0.1f;
             MoneyManager.money -= upgradeCostMoneyIncreaseRate;
             upgradeCostMoneyIncreaseRate += 10;
             upgradeCountMoneyIncreaseRate++;
             
         }
-        else
-        {
-            if (upgradeButton != null)
-            {
-                upgradeButton.interactable = false;
-            }
-        }
+       
       
     }
-    /*
-    public void upgradeLuck()
-    {
-        if (MoneyManager.money >= upgradeCostLLuck)
-        {
-            upgradeButton.interactable = true;
-            PlayerManager.criticalChance += 5;
-            MoneyManager.money -= upgradeCostLLuck;
-        }
-        else
-        {
-            if (upgradeButton != null)
-            {
-                upgradeButton.interactable = false;
-            }
-        }
-    
-    }
-*/
+  
+void Update()
+{
+    if (upgradeButtonFireRate != null)
+        upgradeButtonFireRate.interactable = MoneyManager.money >= upgradeCostFireRate;
+
+    if (upgradeButtonHealth != null)
+        upgradeButtonHealth.interactable = MoneyManager.money >= upgradeCostHealth;
+
+    if (upgradeButtonDamage != null)
+        upgradeButtonDamage.interactable = MoneyManager.money >= upgradeCostDamage;
+
+    if (upgradeButtonMoneyIncreaseRate != null)
+        upgradeButtonMoneyIncreaseRate.interactable = MoneyManager.money >= upgradeCostMoneyIncreaseRate;
+
+    if (upgradeButtonLuck != null)
+        upgradeButtonLuck.interactable = MoneyManager.money >= upgradeCostLLuck;
+}
+
 
 
 
