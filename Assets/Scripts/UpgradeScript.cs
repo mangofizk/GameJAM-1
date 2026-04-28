@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UpgradeScript : MonoBehaviour
 {
-    public static int upgradeCostFireRate = 5;
+    public static int upgradeCostFireRate = 3;
     public static int upgradeCostHealth = 5;
     public static int upgradeCostDamage = 5;
     public static int upgradeCostLLuck = 10;
-    public static int upgradeCostMoneyIncreaseRate = 20;
+    public static int upgradeCostMoneyIncreaseRate = 5;
     public float fireRateReduction = 0.1f;
     public float healthIncrease = 10f;
     public Button upgradeButtonFireRate;

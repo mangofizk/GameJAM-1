@@ -1,0 +1,381 @@
+fileFormatVersion: 2
+guid: 60eb4d34c34a29541a9c78f0762e377a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3206492893741226530
+    second: chargeupbigbidenblast_0
+  - first:
+      213: 6845177672959878513
+    second: chargeupbigbidenblast_1
+  - first:
+      213: 7161650495933176233
+    second: chargeupbigbidenblast_2
+  - first:
+      213: 8540717516220793743
+    second: chargeupbigbidenblast_3
+  - first:
+      213: -7658995538733028423
+    second: chargeupbigbidenblast_4
+  - first:
+      213: 171371617186718339
+    second: chargeupbigbidenblast_5
+  - first:
+      213: -4545117209223402481
+    second: chargeupbigbidenblast_6
+  - first:
+      213: -3847386742612667648
+    second: chargeupbigbidenblast_7
+  - first:
+      213: -8936869958982089009
+    second: chargeupbigbidenblast_8
+  - first:
+      213: -1189109333642520653
+    second: chargeupbigbidenblast_9
+  - first:
+      213: 7264131547254956078
+    second: chargeupbigbidenblast_10
+  - first:
+      213: 8608601665674354455
+    second: chargeupbigbidenblast_11
+  - first:
+      213: 5766333400575105540
+    second: chargeupbigbidenblast_12
+  - first:
+      213: 9047637238578965967
+    second: chargeupbigbidenblast_13
+  - first:
+      213: -7033595416872966661
+    second: chargeupbigbidenblast_14
+  - first:
+      213: 3274866625789155106
+    second: chargeupbigbidenblast_15
+  - first:
+      213: 457724852963289176
+    second: chargeupbigbidenblast_16
+  - first:
+      213: -6005115282565891653
+    second: chargeupbigbidenblast_17
+  - first:
+      213: 2913668640087520184
+    second: chargeupbigbidenblast_18
+  - first:
+      213: 4499912058634410522
+    second: chargeupbigbidenblast_19
+  - first:
+      213: 5246910135683630267
+    second: chargeupbigbidenblast_20
+  - first:
+      213: -3840526156534371828
+    second: chargeupbigbidenblast_21
+  - first:
+      213: -5887446744896459562
+    second: chargeupbigbidenblast_22
+  - first:
+      213: 6771146065759089069
+    second: chargeupbigbidenblast_23
+  - first:
+      213: 5870715931955095238
+    second: chargeupbigbidenblast_24
+  - first:
+      213: -5449791073172706120
+    second: chargeupbigbidenblast_25
+  - first:
+      213: -7947516005443662710
+    second: chargeupbigbidenblast_26
+  - first:
+      213: -3805117721582451950
+    second: chargeupbigbidenblast_27
+  - first:
+      213: 4089823635894765787
+    second: chargeupbigbidenblast_28
+  - first:
+      213: 9174463892947037424
+    second: chargeupbigbidenblast_29
+  - first:
+      213: 3584540990492393019
+    second: chargeupbigbidenblast_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chargeupbigbidenblast_12
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 174
+        width: 392
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40adfbd2da1260050800000000000000
+      internalID: 5766333400575105540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeupbigbidenblast_13
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 174
+        width: 463
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd681ec12aaf8d70800000000000000
+      internalID: 9047637238578965967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeupbigbidenblast_16
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 169
+        width: 510
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858aeb1245a2a5600800000000000000
+      internalID: 457724852963289176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeupbigbidenblast_20
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 174
+        width: 392
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4c1d518f4c0d840800000000000000
+      internalID: 5246910135683630267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4cb43707c80dc344c920d545444dadad
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      chargeupbigbidenblast_0: 3206492893741226530
+      chargeupbigbidenblast_1: 6845177672959878513
+      chargeupbigbidenblast_10: 7264131547254956078
+      chargeupbigbidenblast_11: 8608601665674354455
+      chargeupbigbidenblast_12: 5766333400575105540
+      chargeupbigbidenblast_13: 9047637238578965967
+      chargeupbigbidenblast_14: -7033595416872966661
+      chargeupbigbidenblast_15: 3274866625789155106
+      chargeupbigbidenblast_16: 457724852963289176
+      chargeupbigbidenblast_17: -6005115282565891653
+      chargeupbigbidenblast_18: 2913668640087520184
+      chargeupbigbidenblast_19: 4499912058634410522
+      chargeupbigbidenblast_2: 7161650495933176233
+      chargeupbigbidenblast_20: 5246910135683630267
+      chargeupbigbidenblast_21: -3840526156534371828
+      chargeupbigbidenblast_22: -5887446744896459562
+      chargeupbigbidenblast_23: 6771146065759089069
+      chargeupbigbidenblast_24: 5870715931955095238
+      chargeupbigbidenblast_25: -5449791073172706120
+      chargeupbigbidenblast_26: -7947516005443662710
+      chargeupbigbidenblast_27: -3805117721582451950
+      chargeupbigbidenblast_28: 4089823635894765787
+      chargeupbigbidenblast_29: 9174463892947037424
+      chargeupbigbidenblast_3: 8540717516220793743
+      chargeupbigbidenblast_30: 3584540990492393019
+      chargeupbigbidenblast_4: -7658995538733028423
+      chargeupbigbidenblast_5: 171371617186718339
+      chargeupbigbidenblast_6: -4545117209223402481
+      chargeupbigbidenblast_7: -3847386742612667648
+      chargeupbigbidenblast_8: -8936869958982089009
+      chargeupbigbidenblast_9: -1189109333642520653
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

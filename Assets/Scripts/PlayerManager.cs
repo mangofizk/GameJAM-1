@@ -26,12 +26,13 @@ public class PlayerManager : MonoBehaviour
 
     public AudioClip ShootingSound;
     public AudioClip EnemyDamageSound;
+    public BigBumboBlast BlastScript;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
 
+        Time.timeScale = 1f;
         timer = 0;
         fireRate = startingFirerate;
         health = startingHealth;
@@ -45,7 +46,7 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > fireRate)
+        if (timer > fireRate && BlastScript.blastBool == false)
         {
             timer = 0;
             animator.Play("Shooting");
@@ -91,10 +92,9 @@ public class PlayerManager : MonoBehaviour
         health -= damage;
         setHealthBar();
 
-        if (health < 0)
-        {
-            Destroy(gameObject);
-            Die();
+        if (health <= 0)
+        { 
+          Die();
         }
     }
 
