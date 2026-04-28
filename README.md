@@ -1,4 +1,4 @@
-Our GameJam game "Johns vs machine"
+Our GameJam game "Bob bigboots vs John the AI"
 We are group number 202:
 - Daniel Husted
 - Leonor Carvalheiro
