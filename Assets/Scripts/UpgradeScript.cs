@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,8 +20,17 @@ public class UpgradeScript : MonoBehaviour
     private int upgradeCountFireRate = 0;
     private int upgradeCountHealth = 0;
     private int upgradeCountDamage = 0;
-    private int upgradeCountMoneyIncreaseRate = 0; 
+    private int upgradeCountMoneyIncreaseRate = 0;
 
+
+    private void Start()
+    {
+        upgradeButtonFireRate.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostFireRate.ToString();
+        upgradeButtonHealth.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostHealth.ToString();
+        upgradeButtonDamage.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostDamage.ToString();
+        upgradeButtonMoneyIncreaseRate.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostMoneyIncreaseRate.ToString();
+        
+    }
     public void ApplyUpgradeFireRate()
     {
         if (MoneyManager.money >= upgradeCostFireRate)
@@ -29,7 +39,8 @@ public class UpgradeScript : MonoBehaviour
             PlayerManager.fireRate -= fireRateReduction;
             MoneyManager.money -= upgradeCostFireRate;
             upgradeCostFireRate += 5;
-            upgradeCountFireRate++; 
+            upgradeCountFireRate++;
+            upgradeButtonFireRate.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostFireRate.ToString();
         }
         switch (upgradeCountFireRate)
         {
@@ -70,6 +81,7 @@ public class UpgradeScript : MonoBehaviour
             MoneyManager.money -= upgradeCostHealth;
             upgradeCostHealth += 5;
             upgradeCountHealth++;
+            upgradeButtonHealth.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostHealth.ToString();
         }
        
         switch (upgradeCountHealth)
@@ -111,6 +123,7 @@ public class UpgradeScript : MonoBehaviour
             MoneyManager.money -= upgradeCostDamage;
             upgradeCostDamage += 10;
             upgradeCountDamage++;
+            upgradeButtonDamage.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostDamage.ToString();
         }
        
         switch (upgradeCountDamage)
@@ -150,7 +163,7 @@ public class UpgradeScript : MonoBehaviour
             MoneyManager.money -= upgradeCostMoneyIncreaseRate;
             upgradeCostMoneyIncreaseRate += 10;
             upgradeCountMoneyIncreaseRate++;
-            
+            upgradeButtonMoneyIncreaseRate.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostMoneyIncreaseRate.ToString();
         }
        
       
