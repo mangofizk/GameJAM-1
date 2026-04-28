@@ -23,6 +23,9 @@ public class PlayerManager : MonoBehaviour
     evilManager evilManager;
 
     Animator animator;
+
+    public AudioClip ShootingSound;
+    public AudioClip EnemyDamageSound;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,10 +61,11 @@ public class PlayerManager : MonoBehaviour
 
         if (enemies.Length == 0)
         {
+            PlayShootingSound();
             evilguy.GetComponent<evilManager>().evilDamage(gundamage);
         } else
         {
-
+            PlayShootingSound();
             GameObject nearestEnemy = enemies[0];
             float distanceToNearest = Vector3.Distance(transform.position, nearestEnemy.transform.position);
 
@@ -83,6 +87,7 @@ public class PlayerManager : MonoBehaviour
 
     public void takeDamage(int damage)
     {
+        PlayEnemyDamageSound();
         health -= damage;
         setHealthBar();
 
@@ -96,6 +101,16 @@ public class PlayerManager : MonoBehaviour
     {
         healthbar.value = health / startingHealth;
 
+    }
+
+    public void PlayShootingSound()
+    {
+        AudioSource.PlayClipAtPoint(ShootingSound, transform.position);
+    }
+
+    public void PlayEnemyDamageSound()
+    {
+        AudioSource.PlayClipAtPoint(EnemyDamageSound, transform.position);
     }
 
 }

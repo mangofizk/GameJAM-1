@@ -2286,6 +2286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   evilMaxHealth: 0
+  evilDeathSound: {fileID: 8300000, guid: f089664d3bf23406c82d8d7f74a9bb3f, type: 3}
   evilHealthBar: {fileID: 1502405603}
 --- !u!1 &1708909857
 GameObject:
@@ -2739,6 +2740,8 @@ MonoBehaviour:
   enemies: []
   healthbar: {fileID: 1679948052}
   evilguy: {fileID: 1682261135}
+  ShootingSound: {fileID: 8300000, guid: 74c8acc15ea9a42afa68e31d61b3f6d6, type: 3}
+  EnemyDamageSound: {fileID: 8300000, guid: f7bbfae59ab574b3ba907b85e389e385, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

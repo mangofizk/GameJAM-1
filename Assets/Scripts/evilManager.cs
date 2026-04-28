@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class evilManager : MonoBehaviour
 {
     public static float evilHealth;
     public int evilMaxHealth;
     public static int evilMoney;
+
+    public AudioClip evilDeathSound;
 
     [SerializeField] Slider evilHealthBar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,14 +28,19 @@ public class evilManager : MonoBehaviour
 
         if (evilHealth <= 0)
         {
-            //det er her Leo
+            EvilDeathSound();
         }
     }
 
     private void setEvilHealthBar()
     {
-        
+
         evilHealthBar.value = evilHealth / evilMaxHealth;
         Debug.Log("evilhealthbar value: " + evilHealthBar.value + " evil health: " + evilHealth + " evil maxHealth" + evilMaxHealth);
+    }
+
+    private void EvilDeathSound()
+    {
+        AudioSource.PlayClipAtPoint(evilDeathSound, transform.position);
     }
 }
