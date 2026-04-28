@@ -10,7 +10,6 @@ public class PlayerManager : MonoBehaviour
     public static int gundamage;
     private float timer;
 
-    public GameObject gameover;
 
     [SerializeField] private int startingHealth;
     public static float health;
@@ -85,14 +84,12 @@ public class PlayerManager : MonoBehaviour
         if (health < 0)
         {
             Destroy(gameObject);
-            gameover.SetActive(true);
-             Time.timeScale = 0f;
-
         }
     }
 
     private void setHealthBar()
     {
         healthbar.value = health / startingHealth;
+
     }
 }
