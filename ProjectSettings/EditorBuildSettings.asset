@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jayson Visual Test.unity
     guid: 2446b17daff276b4aaf63d0512528553
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 6aaaacf492c2c424d90ec9256da32e5a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

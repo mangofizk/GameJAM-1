@@ -1,7 +1,8 @@
+using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
-
 public class evilManager : MonoBehaviour
 {
     public static float evilHealth;
@@ -29,8 +30,11 @@ public class evilManager : MonoBehaviour
         if (evilHealth <= 0)
         {
             EvilDeathSound();
+            SceneManager.LoadScene(4);
         }
     }
+
+
 
     private void setEvilHealthBar()
     {
