@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7559881821804346417}
   - component: {fileID: 4861478015639611346}
   - component: {fileID: 4972090257212452891}
+  - component: {fileID: 2658394774742002505}
+  - component: {fileID: 963828900736831301}
   m_Layer: 0
   m_Name: SmallEnemy
   m_TagString: Enemy
@@ -80,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6889626086524889732, guid: a3ee2dff5df896442ae2a71bbc73d0c0, type: 3}
+  m_Sprite: {fileID: 1650589543131778387, guid: 56fb3d2ef6bedf34c9113f7b73c7a6d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -178,3 +180,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8882b8514ab368849b8dc2028eb70c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2658394774742002505
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212043436579437808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4d094383d2d85b4b8ff3628b0941fee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &963828900736831301
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212043436579437808}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 3ad10f4f567deba4893ae84dfc5c5e16, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
