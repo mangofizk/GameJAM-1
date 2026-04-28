@@ -5,6 +5,8 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private float startingFirerate;
     public static float fireRate;
+
+    [SerializeField] int startingGundamage;
     public static int gundamage;
     private float timer;
 
@@ -22,6 +24,7 @@ public class PlayerManager : MonoBehaviour
         timer = 0;
         fireRate = startingFirerate;
         health = startingHealth;
+        gundamage = startingGundamage;
 
         setHealthBar();
     }
