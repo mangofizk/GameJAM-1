@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     public static int gundamage;
     private float timer;
 
-
+    public GameObject gameoverimage;
     [SerializeField] private int startingHealth;
     public static float health;
 
@@ -94,6 +94,7 @@ public class PlayerManager : MonoBehaviour
         if (health < 0)
         {
             Destroy(gameObject);
+            Die();
         }
     }
 
@@ -111,6 +112,12 @@ public class PlayerManager : MonoBehaviour
     public void PlayEnemyDamageSound()
     {
         AudioSource.PlayClipAtPoint(EnemyDamageSound, transform.position);
+    }
+
+    public void Die()
+    {
+        gameoverimage.SetActive(true);
+        Time.timeScale = 0f;
     }
 
 }
