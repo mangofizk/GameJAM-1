@@ -26,8 +26,9 @@ public class enemyManager : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             col.GetComponent<PlayerManager>().takeDamage(enemyDamage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 
     public void dealdamage(int damage)
