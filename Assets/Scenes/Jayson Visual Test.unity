@@ -1623,7 +1623,7 @@ MonoBehaviour:
 
     Ask company if they agree before sharing private information
 
-    
+
 
 '
   m_isRightToLeft: 0
@@ -1787,10 +1787,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: takeDamage
-        m_Mode: 3
+      - m_Target: {fileID: 1786181124}
+        m_TargetAssemblyTypeName: UpgradeScript, Assembly-CSharp
+        m_MethodName: ApplyUpgradePlayerDamage
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3892,10 +3892,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: takeDamage
-        m_Mode: 3
+      - m_Target: {fileID: 1786181124}
+        m_TargetAssemblyTypeName: UpgradeScript, Assembly-CSharp
+        m_MethodName: ApplyUpgradeFireRate
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4835,6 +4835,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712399898}
   m_CullTransparentMesh: 1
+--- !u!1 &1786181122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786181123}
+  - component: {fileID: 1786181124}
+  m_Layer: 0
+  m_Name: UpgradeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1786181123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786181122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 975.8586, y: 267.85382, z: -1.5497413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1786181124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786181122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4a7381de1d7ab4a9f0daa811ce3905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRateReduction: 0.1
+  healthIncrease: 10
+  upgradeButtonFireRate: {fileID: 1531610614}
+  upgradeButtonHealth: {fileID: 1876297143}
+  upgradeButtonDamage: {fileID: 749920114}
+  upgradeButtonMoneyIncreaseRate: {fileID: 2134524850}
+  upgradeButtonLuck: {fileID: 0}
 --- !u!1 &1807972959
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,10 +5044,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: takeDamage
-        m_Mode: 3
+      - m_Target: {fileID: 1786181124}
+        m_TargetAssemblyTypeName: UpgradeScript, Assembly-CSharp
+        m_MethodName: ApplyUpgradeHealth
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5800,6 +5851,7 @@ GameObject:
   - component: {fileID: 2092948091}
   - component: {fileID: 2092948090}
   - component: {fileID: 2092948093}
+  - component: {fileID: 2092948094}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5922,6 +5974,28 @@ MonoBehaviour:
   enemies: []
   healthbar: {fileID: 1427602515}
   evilguy: {fileID: 1682261135}
+--- !u!95 &2092948094
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092948089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4284449dcbc857e4ea39c1172303ec7c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2134524848
 GameObject:
   m_ObjectHideFlags: 0
@@ -6005,10 +6079,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: takeDamage
-        m_Mode: 3
+      - m_Target: {fileID: 1786181124}
+        m_TargetAssemblyTypeName: UpgradeScript, Assembly-CSharp
+        m_MethodName: UpgradeMoneyIncreaseRate
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6066,3 +6140,4 @@ SceneRoots:
   - {fileID: 2092948092}
   - {fileID: 1923972079}
   - {fileID: 1166325017}
+  - {fileID: 1786181123}
