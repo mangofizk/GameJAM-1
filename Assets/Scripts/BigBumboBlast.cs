@@ -5,7 +5,8 @@ public class BigBumboBlast : MonoBehaviour
 {
 [SerializeField] GameObject Player;
 [SerializeField] float maxTapDelay = 0.3f;
-
+public static  float cooldown =20f;
+private float timer = 0f;
 private GameObject[] enemies;
 float lastTapTime = 0f;
     void Awake()
@@ -14,6 +15,8 @@ float lastTapTime = 0f;
     }
     void Update()
     {
+        timer += Time.deltaTime;
+
           if (touch.activeTouches.Count < 1)
             return;
 
@@ -23,8 +26,9 @@ float lastTapTime = 0f;
         {
             float timeSinceLastTap = Time.time - lastTapTime;
 
-            if (timeSinceLastTap <= maxTapDelay)
+            if (timeSinceLastTap <= maxTapDelay && timer >= cooldown)
             {
+                timer = 0f;
                 enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 foreach (GameObject enemy in enemies)
                 {
