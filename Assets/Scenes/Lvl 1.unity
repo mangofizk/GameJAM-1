@@ -387,6 +387,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1682261137}
   - component: {fileID: 1682261136}
+  - component: {fileID: 1682261139}
+  - component: {fileID: 1682261138}
   m_Layer: 0
   m_Name: EnemyBase
   m_TagString: Untagged
@@ -464,6 +466,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682261138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682261135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a73e54c5b0b0b4fa3119e0f49ed243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 6212043436579437808, guid: 82bb0c0db78472a4fa43c0d82c77fcff, type: 3}
+  spawnrange: {x: 5, y: 5}
+--- !u!114 &1682261139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682261135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9772947c3bdc45f4895831bff389dbb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evilMaxHealth: 0
+  evilHealthBar: {fileID: 0}
 --- !u!1 &2092948089
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +505,7 @@ GameObject:
   - component: {fileID: 2092948092}
   - component: {fileID: 2092948091}
   - component: {fileID: 2092948090}
+  - component: {fileID: 2092948093}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -579,6 +610,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2092948093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092948089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d14814da7c3904e9f282650d9360b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingFirerate: 2
+  startingGundamage: 1
+  startingHealth: 10
+  enemies: []
+  healthbar: {fileID: 0}
+  evilguy: {fileID: 1682261135}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
