@@ -3,9 +3,9 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-    public float MoveSpeed = 5;
+    public static float MoveSpeed = 5;
 
-    [SerializeField] private GameObject Player; 
+    private GameObject Player; 
 
 
     private Vector3 target;
@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        Player = GameObject.FindGameObjectWithTag ("Player");
         
     }
 
