@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class enemyManager : MonoBehaviour
 {
-    public static int enemyMaxHealth;
+    public static int enemyMaxHealth = 1;
     private int health;
-    public static int enemyDamage;
+    public static int enemyDamage = 1;
 
     PlayerManager playerManager;
     
@@ -32,7 +32,12 @@ public class enemyManager : MonoBehaviour
 
     public void dealdamage(int damage)
     {
+        Debug.Log("took damage");
         health -= damage;
-        Destroy(gameObject);
+        if (health <= 0)
+        {
+            Debug.Log("drone died");
+            Destroy(gameObject);
+        }
     }
 }
