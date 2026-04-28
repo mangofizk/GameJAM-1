@@ -31,6 +31,8 @@ private Animator animator;
     {
         yield return new WaitForSeconds(2f);
     }
+
+    private float lastTimeProcked = float.MaxValue;
     void Update()
     {
         timer += Time.deltaTime;
@@ -46,9 +48,12 @@ private Animator animator;
         if (touch1.phase == UnityEngine.InputSystem.TouchPhase.Began)
         {
             float timeSinceLastTap = Time.time - lastTapTime;
+            lastTimeProcked = lastTimeProcked - Time.time;
+
             Debug.Log("Blasting early");
-            if (timeSinceLastTap <= maxTapDelay)
+            if (timeSinceLastTap >= maxTapDelay && lastTimeProcked >= cooldown)
             {
+                lastTimeProcked = Time.time;
                 timer = 0f;
                 blastBool = true;
                 animator.Play("BideBlast");
