@@ -16,11 +16,16 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject[] enemies;
 
-    [SerializeField] Slider healthbar;    
+    [SerializeField] Slider healthbar;
+
+    [SerializeField] GameObject evilguy;
+    evilManager evilManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
+
         timer = 0;
         fireRate = startingFirerate;
         health = startingHealth;
@@ -46,22 +51,30 @@ public class PlayerManager : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         Debug.Log("bang");
 
-        GameObject nearestEnemy = enemies[0];
-        float distanceToNearest = Vector3.Distance(transform.position, nearestEnemy.transform.position);
-
-        for (int i = 1; i < enemies.Length; i++)
+        if (enemies.Length == 0)
         {
-            float distanceToCurrent = Vector3.Distance(transform.position, enemies[i].transform.position);
+            evilguy.GetComponent<evilManager>().evilDamage(gundamage);
+        } else
+        {
 
-            if (distanceToCurrent < distanceToNearest)
+            GameObject nearestEnemy = enemies[0];
+            float distanceToNearest = Vector3.Distance(transform.position, nearestEnemy.transform.position);
+
+            for (int i = 1; i < enemies.Length; i++)
             {
-                nearestEnemy = enemies[i];
-                distanceToNearest = distanceToCurrent;
-            }
-        }
+                float distanceToCurrent = Vector3.Distance(transform.position, enemies[i].transform.position);
 
-        nearestEnemy.GetComponent<enemyManager>().dealdamage(gundamage);
+                if (distanceToCurrent < distanceToNearest)
+                {
+                    nearestEnemy = enemies[i];
+                    distanceToNearest = distanceToCurrent;
+                }
+            }
+
+            nearestEnemy.GetComponent<enemyManager>().dealdamage(gundamage);
+        }
     }
+
 
     public void takeDamage(int damage)
     {
@@ -74,7 +87,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void setHealthBar()
+    private void setHealthBar()
     {
         healthbar.value = health / startingHealth;
 
