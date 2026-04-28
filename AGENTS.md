@@ -2,7 +2,7 @@
 - Project name: GameJAM-1
 - Unity version: Unity 6000.0.57f1
 - Active game object:
-  - Name: Evil Healthbar
+  - Name: EnemyBase
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
