@@ -2,12 +2,7 @@
 - Project name: GameJAM-1
 - Unity version: Unity 6000.0.57f1
 - Active game object:
-<<<<<<< Updated upstream
-  - Name: SmallEnemy
-  - Tag: Enemy
-=======
-  - Name: Player
-  - Tag: Player
->>>>>>> Stashed changes
-  - Layer: Default
+  - Name: Evil Healthbar
+  - Tag: Untagged
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
