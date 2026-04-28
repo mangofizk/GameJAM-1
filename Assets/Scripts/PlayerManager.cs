@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,8 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] GameObject evilguy;
     evilManager evilManager;
+
+    Animator animator;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,6 +35,7 @@ public class PlayerManager : MonoBehaviour
         gundamage = startingGundamage;
 
         setHealthBar();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -41,7 +45,7 @@ public class PlayerManager : MonoBehaviour
         if (timer > fireRate)
         {
             timer = 0;
-            shoot();
+            animator.Play("Shooting");
         }
     }
 
@@ -50,6 +54,7 @@ public class PlayerManager : MonoBehaviour
        
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         Debug.Log("bang");
+        
 
         if (enemies.Length == 0)
         {
@@ -92,4 +97,5 @@ public class PlayerManager : MonoBehaviour
         healthbar.value = health / startingHealth;
 
     }
+
 }
