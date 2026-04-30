@@ -6,7 +6,7 @@ public class BigBumboBlast : MonoBehaviour
 {
 [SerializeField] GameObject Player;
 [SerializeField] float maxTapDelay = 0.3f;
-public static  float cooldown =20f;
+public static  float cooldown =2f;
 private float timer = 0f;
 private GameObject[] enemies;
 float lastTapTime = 0f;
@@ -47,11 +47,11 @@ private Animator animator;
         Debug.Log("1 touch");
         if (touch1.phase == UnityEngine.InputSystem.TouchPhase.Began)
         {
-            float timeSinceLastTap = Time.time - lastTapTime;
-            lastTimeProcked = lastTimeProcked - Time.time;
+           
+            
 
             Debug.Log("Blasting early");
-            if (timeSinceLastTap >= maxTapDelay && lastTimeProcked >= cooldown)
+            if (lastTapTime >= maxTapDelay && lastTimeProcked >= cooldown)
             {
                 lastTimeProcked = Time.time;
                 timer = 0f;
