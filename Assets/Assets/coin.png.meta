@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c364d5db62f8ddd4bb7b5797a7179626
+guid: 26265b7a73c804fc7a335b9f602835ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4026550657247339352
-    second: GameJamBackground_0
+      213: 7675826601332790545
+    second: coin_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameJamBackground_0
+      name: coin_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 64
+        y: 72
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 853e75b3d7e21e730800000000000000
-      internalID: 4026550657247339352
+      spriteID: 1155fe920a3068a60800000000000000
+      internalID: 7675826601332790545
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GameJamBackground_0: 4026550657247339352
+      coin_0: 7675826601332790545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

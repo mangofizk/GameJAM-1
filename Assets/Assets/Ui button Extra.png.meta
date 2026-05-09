@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: c364d5db62f8ddd4bb7b5797a7179626
+guid: 56e9c91824893094c975485d87998db1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4026550657247339352
-    second: GameJamBackground_0
+      213: -6805804647616861916
+    second: Ui button Extra_0
+  - first:
+      213: 684422111409407255
+    second: Ui button Extra_1
+  - first:
+      213: -3161836461641140794
+    second: Ui button Extra_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameJamBackground_0
+      name: Ui button Extra_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 3
+        y: 14
+        width: 44
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +173,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 853e75b3d7e21e730800000000000000
-      internalID: 4026550657247339352
+      spriteID: 42928105bbcec81a0800000000000000
+      internalID: -6805804647616861916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui button Extra_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 15
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7150bfab84e8f7900800000000000000
+      internalID: 684422111409407255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui button Extra_2
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 14
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c570028d76ee14d0800000000000000
+      internalID: -3161836461641140794
       vertices: []
       indices: 
       edges: []
@@ -187,7 +237,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GameJamBackground_0: 4026550657247339352
+      Ui button Extra_0: -6805804647616861916
+      Ui button Extra_1: 684422111409407255
+      Ui button Extra_2: -3161836461641140794
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

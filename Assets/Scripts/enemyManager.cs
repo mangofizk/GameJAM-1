@@ -5,7 +5,7 @@ public class enemyManager : MonoBehaviour
     public static int enemyMaxHealth = 1;
     private int health;
     public static int enemyDamage = 1;
-
+    private Animator animator;
     PlayerManager playerManager;
     
 
@@ -13,6 +13,7 @@ public class enemyManager : MonoBehaviour
     void Start()
     {       
         health = enemyMaxHealth;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,8 +27,9 @@ public class enemyManager : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             col.GetComponent<PlayerManager>().takeDamage(enemyDamage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 
     public void dealdamage(int damage)
@@ -37,6 +39,7 @@ public class enemyManager : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("drone died");
+            //animator.Play("robo death");
             Destroy(gameObject);
         }
     }

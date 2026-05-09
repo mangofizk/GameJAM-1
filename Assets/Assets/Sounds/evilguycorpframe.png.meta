@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: c364d5db62f8ddd4bb7b5797a7179626
+guid: 4717d36c18896274699cfff5a3b61c5a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4026550657247339352
-    second: GameJamBackground_0
+      213: 845233818054975719
+    second: evilguycorpframe_0
+  - first:
+      213: 1377017956305461825
+    second: evilguycorpframe_1
+  - first:
+      213: -2802583627399976234
+    second: evilguycorpframe_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -152,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameJamBackground_0
+      name: evilguycorpframe_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 149
+        y: 19
+        width: 1042
+        height: 1242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +173,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 853e75b3d7e21e730800000000000000
-      internalID: 4026550657247339352
+      spriteID: 7e06055edafdabb00800000000000000
+      internalID: 845233818054975719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evilguycorpframe_1
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 19
+        width: 1042
+        height: 1242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 142ebe619862c1310800000000000000
+      internalID: 1377017956305461825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evilguycorpframe_2
+      rect:
+        serializedVersion: 2
+        x: 2699
+        y: 19
+        width: 1042
+        height: 1242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6daaf732a093b19d0800000000000000
+      internalID: -2802583627399976234
       vertices: []
       indices: 
       edges: []
@@ -187,7 +237,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GameJamBackground_0: 4026550657247339352
+      evilguycorpframe_0: 845233818054975719
+      evilguycorpframe_1: 1377017956305461825
+      evilguycorpframe_2: -2802583627399976234
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

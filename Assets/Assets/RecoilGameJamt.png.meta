@@ -1,10 +1,28 @@
 fileFormatVersion: 2
-guid: c364d5db62f8ddd4bb7b5797a7179626
+guid: 1defab10b26cb2e43a25d98a352ccf07
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4026550657247339352
-    second: GameJamBackground_0
+      213: -1917770115939089659
+    second: RecoilGameJamt_0
+  - first:
+      213: -2258262555655076298
+    second: RecoilGameJamt_1
+  - first:
+      213: 6774669020714463370
+    second: RecoilGameJamt_2
+  - first:
+      213: -1504128786039348278
+    second: RecoilGameJamt_3
+  - first:
+      213: 7564668129674578642
+    second: RecoilGameJamt_4
+  - first:
+      213: -3301593474589374746
+    second: RecoilGameJamt_5
+  - first:
+      213: 9126155622867209593
+    second: RecoilGameJamt_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -152,13 +170,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameJamBackground_0
+      name: RecoilGameJamt_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 309
+        y: 349
+        width: 472
+        height: 622
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +185,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 853e75b3d7e21e730800000000000000
-      internalID: 4026550657247339352
+      spriteID: 50347968d36b265e0800000000000000
+      internalID: -1917770115939089659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilGameJamt_1
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 349
+        width: 662
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6360d90ab2a09a0e0800000000000000
+      internalID: -2258262555655076298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilGameJamt_2
+      rect:
+        serializedVersion: 2
+        x: 2869
+        y: 349
+        width: 712
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a807782a495740e50800000000000000
+      internalID: 6774669020714463370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilGameJamt_3
+      rect:
+        serializedVersion: 2
+        x: 4149
+        y: 349
+        width: 702
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac36fab96d2402be0800000000000000
+      internalID: -1504128786039348278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilGameJamt_4
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 349
+        width: 592
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dac8f8a5991bf860800000000000000
+      internalID: 7564668129674578642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilGameJamt_5
+      rect:
+        serializedVersion: 2
+        x: 6709
+        y: 349
+        width: 682
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e64a5a3a326e22d0800000000000000
+      internalID: -3301593474589374746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilGameJamt_6
+      rect:
+        serializedVersion: 2
+        x: 7989
+        y: 349
+        width: 682
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d0fe1cf2e96ae70800000000000000
+      internalID: 9126155622867209593
       vertices: []
       indices: 
       edges: []
@@ -187,7 +337,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GameJamBackground_0: 4026550657247339352
+      RecoilGameJamt_0: -1917770115939089659
+      RecoilGameJamt_1: -2258262555655076298
+      RecoilGameJamt_2: 6774669020714463370
+      RecoilGameJamt_3: -1504128786039348278
+      RecoilGameJamt_4: 7564668129674578642
+      RecoilGameJamt_5: -3301593474589374746
+      RecoilGameJamt_6: 9126155622867209593
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

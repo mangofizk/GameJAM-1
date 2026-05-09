@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: c364d5db62f8ddd4bb7b5797a7179626
+guid: 7e53df816ed33294d9ff4466db289174
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4026550657247339352
-    second: GameJamBackground_0
+      213: 2841873512105785277
+    second: enemybaseframe_0
+  - first:
+      213: 6560488877869035534
+    second: enemybaseframe_1
+  - first:
+      213: -3661778463428247267
+    second: enemybaseframe_2
+  - first:
+      213: -5118156045359266074
+    second: enemybaseframe_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -152,13 +161,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameJamBackground_0
+      name: enemybaseframe_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 79
+        y: 79
+        width: 1082
+        height: 872
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +176,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 853e75b3d7e21e730800000000000000
-      internalID: 4026550657247339352
+      spriteID: db738a107ec507720800000000000000
+      internalID: 2841873512105785277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemybaseframe_1
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 79
+        width: 1082
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00f84e10e98b0b50800000000000000
+      internalID: 6560488877869035534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemybaseframe_2
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 79
+        width: 1082
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d110f2173efbe2dc0800000000000000
+      internalID: -3661778463428247267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemybaseframe_3
+      rect:
+        serializedVersion: 2
+        x: 3919
+        y: 79
+        width: 1082
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6c753a138a8f8b0800000000000000
+      internalID: -5118156045359266074
       vertices: []
       indices: 
       edges: []
@@ -187,7 +262,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GameJamBackground_0: 4026550657247339352
+      enemybaseframe_0: 2841873512105785277
+      enemybaseframe_1: 6560488877869035534
+      enemybaseframe_2: -3661778463428247267
+      enemybaseframe_3: -5118156045359266074
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

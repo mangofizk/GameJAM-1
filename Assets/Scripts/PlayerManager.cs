@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     public static int gundamage;
     private float timer;
 
-
+    public GameObject gameoverimage;
     [SerializeField] private int startingHealth;
     public static float health;
 
@@ -20,28 +21,35 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] GameObject evilguy;
     evilManager evilManager;
+
+    Animator animator;
+
+    public AudioClip ShootingSound;
+    public AudioClip EnemyDamageSound;
+    public BigBumboBlast BlastScript;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
 
+        Time.timeScale = 1f;
         timer = 0;
         fireRate = startingFirerate;
         health = startingHealth;
         gundamage = startingGundamage;
 
         setHealthBar();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > fireRate)
+        if (timer > fireRate && BlastScript.blastBool == false)
         {
             timer = 0;
-            shoot();
+            animator.Play("Shooting");
         }
     }
 
@@ -50,13 +58,15 @@ public class PlayerManager : MonoBehaviour
        
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         Debug.Log("bang");
+        
 
         if (enemies.Length == 0)
         {
+            PlayShootingSound();
             evilguy.GetComponent<evilManager>().evilDamage(gundamage);
         } else
         {
-
+            PlayShootingSound();
             GameObject nearestEnemy = enemies[0];
             float distanceToNearest = Vector3.Distance(transform.position, nearestEnemy.transform.position);
 
@@ -78,12 +88,13 @@ public class PlayerManager : MonoBehaviour
 
     public void takeDamage(int damage)
     {
+        PlayEnemyDamageSound();
         health -= damage;
         setHealthBar();
 
-        if (health < 0)
-        {
-            Destroy(gameObject);
+        if (health <= 0)
+        { 
+          Die();
         }
     }
 
@@ -92,4 +103,21 @@ public class PlayerManager : MonoBehaviour
         healthbar.value = health / startingHealth;
 
     }
+
+    public void PlayShootingSound()
+    {
+        AudioSource.PlayClipAtPoint(ShootingSound, transform.position);
+    }
+
+    public void PlayEnemyDamageSound()
+    {
+        AudioSource.PlayClipAtPoint(EnemyDamageSound, transform.position);
+    }
+
+    public void Die()
+    {
+        gameoverimage.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
 }

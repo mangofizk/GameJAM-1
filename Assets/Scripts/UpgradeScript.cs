@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class UpgradeScript : MonoBehaviour
 {
     public static int upgradeCostFireRate = 5;
-    public static int upgradeCostHealth = 5;
-    public static int upgradeCostDamage = 5;
+    public static int upgradeCostHealth = 7;
+    public static int upgradeCostDamage = 7;
     public static int upgradeCostLLuck = 10;
-    public static int upgradeCostMoneyIncreaseRate = 20;
+    public static int upgradeCostMoneyIncreaseRate = 5;
     public float fireRateReduction = 0.1f;
     public float healthIncrease = 10f;
     public Button upgradeButtonFireRate;
@@ -37,6 +37,7 @@ public class UpgradeScript : MonoBehaviour
         {
             
             PlayerManager.fireRate -= fireRateReduction;
+            Debug.Log(PlayerManager.fireRate);
             MoneyManager.money -= upgradeCostFireRate;
             upgradeCostFireRate += 5;
             upgradeCountFireRate++;
@@ -69,7 +70,7 @@ public class UpgradeScript : MonoBehaviour
                 enemyManager.enemyMaxHealth++;
                 break;
         }
-        
+       
 
     }
     public void ApplyUpgradeHealth()
@@ -159,7 +160,7 @@ public class UpgradeScript : MonoBehaviour
         if (MoneyManager.money >= upgradeCostMoneyIncreaseRate)
         {
             
-            MoneyManager.moneyIncreaseRate -= 0.1f;
+            MoneyManager.moneyIncreaseRate -= 0.5f;
             MoneyManager.money -= upgradeCostMoneyIncreaseRate;
             upgradeCostMoneyIncreaseRate += 10;
             upgradeCountMoneyIncreaseRate++;
