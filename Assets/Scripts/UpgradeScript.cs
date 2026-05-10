@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class UpgradeScript : MonoBehaviour
 {
     public static int upgradeCostFireRate = 5;
-    public static int upgradeCostHealth = 7;
-    public static int upgradeCostDamage = 7;
-    public static int upgradeCostLLuck = 10;
-    public static int upgradeCostMoneyIncreaseRate = 5;
+    public static int upgradeCostHealth = 6;
+    public static int upgradeCostDamage = 4;
+    public static int upgradeCostLuck = 2;
+    public static int upgradeCostMoneyIncreaseRate = 6;
     public float fireRateReduction = 0.1f;
-    public float healthIncrease = 10f;
+    public float healthIncrease = 15f;
     public Button upgradeButtonFireRate;
     public Button upgradeButtonHealth;
     public Button upgradeButtonDamage;
@@ -21,6 +21,7 @@ public class UpgradeScript : MonoBehaviour
     private int upgradeCountHealth = 0;
     private int upgradeCountDamage = 0;
     private int upgradeCountMoneyIncreaseRate = 0;
+    private int upgradeCountLuck = 0;
 
 
     private void Start()
@@ -29,7 +30,7 @@ public class UpgradeScript : MonoBehaviour
         upgradeButtonHealth.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostHealth.ToString();
         upgradeButtonDamage.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostDamage.ToString();
         upgradeButtonMoneyIncreaseRate.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostMoneyIncreaseRate.ToString();
-        
+        upgradeButtonLuck.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostLuck.ToString();
     }
     public void ApplyUpgradeFireRate()
     {
@@ -120,9 +121,9 @@ public class UpgradeScript : MonoBehaviour
         if (MoneyManager.money >= upgradeCostDamage)
         {
             
-            PlayerManager.gundamage +=1;
+            PlayerManager.gundamage +=2;
             MoneyManager.money -= upgradeCostDamage;
-            upgradeCostDamage += 10;
+            upgradeCostDamage += 7;
             upgradeCountDamage++;
             upgradeButtonDamage.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostDamage.ToString();
         }
@@ -155,14 +156,27 @@ public class UpgradeScript : MonoBehaviour
                 break;
         }
     }
+    public void UpgradeLuck()
+    {
+        if (MoneyManager.money >= upgradeCostLuck)
+        {
+            
+            PlayerManager.luck += 25;
+            MoneyManager.money -= upgradeCostLuck;
+            upgradeCostLuck += 5;
+            upgradeCountLuck++;
+            upgradeButtonLuck.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostLuck.ToString();
+        }
+       
+    }
     public void UpgradeMoneyIncreaseRate()
     {
         if (MoneyManager.money >= upgradeCostMoneyIncreaseRate)
         {
             
-            MoneyManager.moneyIncreaseRate -= 0.5f;
+            MoneyManager.moneyIncreaseRate -= 0.8f;
             MoneyManager.money -= upgradeCostMoneyIncreaseRate;
-            upgradeCostMoneyIncreaseRate += 10;
+            upgradeCostMoneyIncreaseRate += 6;
             upgradeCountMoneyIncreaseRate++;
             upgradeButtonMoneyIncreaseRate.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostMoneyIncreaseRate.ToString();
         }
@@ -185,7 +199,7 @@ void Update()
         upgradeButtonMoneyIncreaseRate.interactable = MoneyManager.money >= upgradeCostMoneyIncreaseRate;
 
     if (upgradeButtonLuck != null)
-        upgradeButtonLuck.interactable = MoneyManager.money >= upgradeCostLLuck;
+        upgradeButtonLuck.interactable = MoneyManager.money >= upgradeCostLuck;
 }
 
 

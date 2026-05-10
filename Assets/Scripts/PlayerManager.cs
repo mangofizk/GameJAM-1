@@ -6,6 +6,8 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private float startingFirerate;
     public static float fireRate;
+    [SerializeField] public static int luck = 5;
+    
 
     [SerializeField] int startingGundamage;
     public static int gundamage;
@@ -57,8 +59,19 @@ public class PlayerManager : MonoBehaviour
     {
        
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        Debug.Log("bang");
-        
+        //Debug.Log("bang");
+        if (enemies.Length == 0)
+        {
+            int roll = Random.Range(0, 100);
+            if (roll < luck)
+            
+            {
+                Debug.Log("Critical hit! " + roll + "Enemy Health at:" + evilManager.evilHealth);
+                PlayShootingSound();
+                evilguy.GetComponent<evilManager>().evilDamage(gundamage*5);
+                
+            }
+        }
 
         if (enemies.Length == 0)
         {
