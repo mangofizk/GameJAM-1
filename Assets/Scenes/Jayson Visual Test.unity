@@ -4403,7 +4403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6212043436579437808, guid: 82bb0c0db78472a4fa43c0d82c77fcff, type: 3}
-  spawnrange: {x: 3, y: 2}
+  spawnRange: {x: 2, y: 2}
 --- !u!114 &1682261139
 MonoBehaviour:
   m_ObjectHideFlags: 0
