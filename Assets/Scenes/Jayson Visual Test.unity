@@ -3436,6 +3436,7 @@ GameObject:
   - component: {fileID: 1489340383}
   - component: {fileID: 1489340382}
   - component: {fileID: 1489340381}
+  - component: {fileID: 1489340384}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3517,6 +3518,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489340384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489340380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &1502405601
 GameObject:
   m_ObjectHideFlags: 0
@@ -4404,6 +4449,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6212043436579437808, guid: 82bb0c0db78472a4fa43c0d82c77fcff, type: 3}
   spawnrange: {x: 3, y: 2}
+  totalWaveAmounts: 31
+  wavegrowthrate: 5
+  waveStartEnemyAmount: 0
+  BosswaveSizeIncrease: 0
 --- !u!114 &1682261139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4775,6 +4824,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4a7381de1d7ab4a9f0daa811ce3905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeCostFireRate: 5
+  upgradeCostHealth: 7
+  upgradeCostDamage: 7
+  upgradeCostLLuck: 10
+  upgradeCostMoneyIncreaseRate: 5
   fireRateReduction: 0.1
   healthIncrease: 10
   upgradeButtonFireRate: {fileID: 1531610614}
@@ -4782,6 +4836,7 @@ MonoBehaviour:
   upgradeButtonDamage: {fileID: 749920114}
   upgradeButtonMoneyIncreaseRate: {fileID: 2134524850}
   upgradeButtonLuck: {fileID: 0}
+  playerManager: {fileID: 2092948093}
 --- !u!1 &1807972959
 GameObject:
   m_ObjectHideFlags: 0
@@ -6147,7 +6202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingFirerate: 1
-  startingGundamage: 3
+  startingGundamage: 1
   gameoverimage: {fileID: 1828710801}
   startingHealth: 15
   enemies: []
@@ -6156,6 +6211,7 @@ MonoBehaviour:
   ShootingSound: {fileID: 8300000, guid: 74c8acc15ea9a42afa68e31d61b3f6d6, type: 3}
   EnemyDamageSound: {fileID: 8300000, guid: f7bbfae59ab574b3ba907b85e389e385, type: 3}
   BlastScript: {fileID: 2092948096}
+  moneyManager: {fileID: 1166325018}
 --- !u!95 &2092948094
 Animator:
   serializedVersion: 7

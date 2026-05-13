@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UpgradeScript : MonoBehaviour
 {
-    public static int upgradeCostFireRate = 5;
-    public static int upgradeCostHealth = 7;
-    public static int upgradeCostDamage = 7;
-    public static int upgradeCostLLuck = 10;
-    public static int upgradeCostMoneyIncreaseRate = 5;
+    public int upgradeCostFireRate = 5;
+    public int upgradeCostHealth = 7;
+    public int upgradeCostDamage = 7;
+    public  int upgradeCostLLuck = 10;
+    public  int upgradeCostMoneyIncreaseRate = 5;
     public float fireRateReduction = 0.1f;
     public float healthIncrease = 10f;
     public Button upgradeButtonFireRate;
@@ -21,6 +21,9 @@ public class UpgradeScript : MonoBehaviour
     private int upgradeCountHealth = 0;
     private int upgradeCountDamage = 0;
     private int upgradeCountMoneyIncreaseRate = 0;
+
+
+    [SerializeField] PlayerManager playerManager;
 
 
     private void Start()
@@ -43,32 +46,10 @@ public class UpgradeScript : MonoBehaviour
             upgradeCountFireRate++;
             upgradeButtonFireRate.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostFireRate.ToString();
         }
-        switch (upgradeCountFireRate)
+        if (upgradeCountFireRate % 2 == 0)
         {
-            case 2 :
-                enemyManager.enemyMaxHealth++;
-                break;
-            case 4 :
-                enemyManager.enemyMaxHealth++;
-                break;
-            case 6 :
-                enemyManager.enemyMaxHealth++;  
-                break;
-            case 8 :
-                enemyManager.enemyMaxHealth++;
-                break;
-            case 10 :
-                enemyManager.enemyMaxHealth++;
-                break;
-            case 12 :
-                enemyManager.enemyMaxHealth++;
-                break;
-            case 14 :
-                enemyManager.enemyMaxHealth++;  
-                break;
-            case 16 :
-                enemyManager.enemyMaxHealth++;
-                break;
+            enemyManager.enemyMaxHealth++;
+            
         }
        
 
@@ -85,32 +66,10 @@ public class UpgradeScript : MonoBehaviour
             upgradeButtonHealth.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostHealth.ToString();
         }
        
-        switch (upgradeCountHealth)
+        if (upgradeCountHealth % 2 == 0)
         {
-            case 2 :
-                enemyManager.enemyDamage++;
-                break;
-            case 4 :
-                enemyManager.enemyDamage++;
-                break;
-            case 6 :
-                enemyManager.enemyDamage++;  
-                break;
-            case 8 :
-                enemyManager.enemyDamage++;
-                break;
-            case 10 :
-                enemyManager.enemyDamage++;
-                break;
-            case 12 :
-                enemyManager.enemyDamage++;
-                break;
-            case 14 :
-                enemyManager.enemyDamage++;  
-                break;
-            case 16 :
-                enemyManager.enemyDamage++;
-                break;
+             enemyManager.enemyDamage++;
+           
         }
         
     }
@@ -127,40 +86,19 @@ public class UpgradeScript : MonoBehaviour
             upgradeButtonDamage.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostDamage.ToString();
         }
        
-        switch (upgradeCountDamage)
+        if (upgradeCountDamage % 2 == 0)
         {
-            case 2 :
-                EnemySpawner.spawnInterval -= 0.1f;
-                break;
-            case 4 :
-                EnemySpawner.spawnInterval -= 0.1f;
-                break;
-            case 6 :
-                EnemySpawner.spawnInterval -= 0.1f;  
-                break;
-            case 8 :
-                EnemySpawner.spawnInterval -= 0.1f;
-                break;
-            case 10 :
-                EnemySpawner.spawnInterval -= 0.1f;
-                break;
-            case 12 :
-                EnemySpawner.spawnInterval -= 0.1f;
-                break;
-            case 14 :
-                EnemySpawner.spawnInterval -= 0.1f;  
-                break;
-            case 16 :
-                EnemySpawner.spawnInterval -= 0.1f;
-                break;
+            EnemySpawner.spawnInterval -= 0.1f;
+            
         }
     }
     public void UpgradeMoneyIncreaseRate()
     {
         if (MoneyManager.money >= upgradeCostMoneyIncreaseRate)
         {
-            
-            MoneyManager.moneyIncreaseRate -= 0.5f;
+
+            //MoneyManager.moneyIncreaseRate -= 0.5f;
+            playerManager.moneyupgrade();
             MoneyManager.money -= upgradeCostMoneyIncreaseRate;
             upgradeCostMoneyIncreaseRate += 10;
             upgradeCountMoneyIncreaseRate++;
@@ -191,5 +129,5 @@ void Update()
 
 
 
-
+    
 }

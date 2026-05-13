@@ -1,12 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemyManager : MonoBehaviour
 {
     public static int enemyMaxHealth = 1;
-    private int health;
+    public int health;
     public static int enemyDamage = 1;
     private Animator animator;
     PlayerManager playerManager;
+    [SerializeField] Slider healthbar;
+    
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,11 +19,7 @@ public class enemyManager : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -39,8 +38,13 @@ public class enemyManager : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("drone died");
-            //animator.Play("robo death");
             Destroy(gameObject);
+        }
+        else
+        {
+            healthbar.gameObject.SetActive(true);
+            healthbar.maxValue = enemyMaxHealth;
+            healthbar.value = health;
         }
     }
 }

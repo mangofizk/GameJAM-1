@@ -8,19 +8,45 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] public static float spawnInterval = 2.5f;
     [SerializeField] public Vector2 spawnrange = new Vector2(10f, 10f);
 
-    private int[] waves = {1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 8};
+    
     private int enemyCount = 0;
     private int maxEnemies = 10;
     private int totalEnemiesSpawned = 0;
     private int maxTotalEnemies = 50;
 
+
+    [SerializeField] int totalWaveAmounts;
+    [SerializeField] int wavegrowthrate;
+    [SerializeField] int waveStartEnemyAmount;
+    [SerializeField] int BosswaveSizeIncrease;
+    private int growthTracker = 0;
+
     void Start()
     {
-        StartCoroutine(spawnEnemies());
+       int[] waves = new int[totalWaveAmounts];
+
+        for (int i = 0; i < waves.Length; i++)
+        {
+            if (wavegrowthrate <= growthTracker)
+            {
+                waveStartEnemyAmount++;
+                growthTracker = 0;
+            }
+            else
+            {
+                growthTracker++;
+            }
+            
+            waves[i] = waveStartEnemyAmount;
+
+        }
+        waves[waves.Length - 1] = (waveStartEnemyAmount + BosswaveSizeIncrease);
+
+        StartCoroutine(spawnEnemies(waves));
     }
      
     
-    private IEnumerator spawnEnemies()
+    private IEnumerator spawnEnemies(int[]waves)
     {
     Vector2 position2D;
        for (int i = 0; i < waves.Length; i++)
@@ -34,9 +60,5 @@ public class EnemySpawner : MonoBehaviour
         }
         
 
-        {
-        
-        
-        }
     }
 }

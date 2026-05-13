@@ -27,10 +27,15 @@ public class PlayerManager : MonoBehaviour
     public AudioClip ShootingSound;
     public AudioClip EnemyDamageSound;
     public BigBumboBlast BlastScript;
+
+    [SerializeField] MoneyManager moneyManager;
+
+    delegate void multidelegate();
+    multidelegate shooter;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        shooter += shootAnimation;
 
         Time.timeScale = 1f;
         timer = 0;
@@ -49,7 +54,7 @@ public class PlayerManager : MonoBehaviour
         if (timer > fireRate && BlastScript.blastBool == false)
         {
             timer = 0;
-            animator.Play("Shooting");
+            shooter();
         }
     }
 
@@ -120,4 +125,20 @@ public class PlayerManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    private void shootAnimation()
+    {
+        animator.Play("Shooting");
+    }
+
+    private void moneyOnShot()
+    {
+        MoneyManager.money++;
+        moneyManager.changeText();
+    }
+
+    public void moneyupgrade()
+    {
+        shooter += moneyOnShot;
+    }
+   
 }
