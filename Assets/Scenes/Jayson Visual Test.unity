@@ -982,6 +982,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450146977}
   m_CullTransparentMesh: 1
+--- !u!1 &524679701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524679702}
+  - component: {fileID: 524679703}
+  m_Layer: 0
+  m_Name: enemyPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &524679702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524679701}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2422.071, y: 204.16461, z: -2.3363597}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &524679703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524679701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc23926e37dafd4a8b6180d98f15f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 6212043436579437808, guid: 82bb0c0db78472a4fa43c0d82c77fcff, type: 3}
 --- !u!1 &549396589
 GameObject:
   m_ObjectHideFlags: 0
@@ -5060,6 +5105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6212043436579437808, guid: 82bb0c0db78472a4fa43c0d82c77fcff, type: 3}
   spawnrange: {x: 3, y: 2}
+  EnemyPool: {fileID: 524679703}
 --- !u!114 &1682261139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5573,7 +5619,7 @@ MonoBehaviour:
   upgradeButtonHealth: {fileID: 1876297143}
   upgradeButtonDamage: {fileID: 749920114}
   upgradeButtonMoneyIncreaseRate: {fileID: 2134524850}
-  upgradeButtonLuck: {fileID: 0}
+  upgradeButtonLuck: {fileID: 1324190961}
 --- !u!1 &1807972959
 GameObject:
   m_ObjectHideFlags: 0
@@ -7178,3 +7224,4 @@ SceneRoots:
   - {fileID: 1786181123}
   - {fileID: 2018860800}
   - {fileID: 1166325017}
+  - {fileID: 524679702}
