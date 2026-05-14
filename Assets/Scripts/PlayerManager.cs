@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
@@ -27,7 +28,21 @@ public class PlayerManager : MonoBehaviour
     public AudioClip ShootingSound;
     public AudioClip EnemyDamageSound;
     public BigBumboBlast BlastScript;
-    
+
+    [SerializeField] GameObject Shield; //Individual Improvement
+
+    private float ShieldTimer = 0f; //Individual Improvement
+    [SerializeField] private float ShieldDuration = 5f; //Individual Improvement
+
+    [SerializeField] private float ShieldCooldown = 5f; //Individual Improvement
+
+
+    private bool ShieldActive = false; //Individual Improvement
+
+    private bool ShieldCoolDownActive = false; //Individual Improvement
+
+    [SerializeField] Slider shieldBar; //Individual Improvement
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -50,6 +65,37 @@ public class PlayerManager : MonoBehaviour
         {
             timer = 0;
             animator.Play("Shooting");
+        }
+
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && !ShieldActive && !ShieldCoolDownActive) //Added to MiniGamejam
+        {
+            Defend();
+        }
+        if (ShieldActive) //Individual Improvement
+        {
+            ShieldTimer += Time.deltaTime;
+            shieldBar.value = 1f - (ShieldTimer / ShieldDuration);
+
+            if (ShieldTimer >= ShieldDuration)
+            {
+                Shield.SetActive(false);
+                ShieldActive = false;
+                ShieldCoolDownActive = true;
+                ShieldTimer = 0f;
+                shieldBar.value = 0f;
+            }
+        }
+        else if (ShieldCoolDownActive) //Individual Improvement
+        {
+            ShieldTimer += Time.deltaTime;
+            shieldBar.value = ShieldTimer / ShieldCooldown;
+
+            if (ShieldTimer >= ShieldCooldown)
+            {
+                ShieldCoolDownActive = false;
+                ShieldTimer = 0f;
+                shieldBar.value = 1f;
+            }
         }
     }
 
@@ -89,7 +135,12 @@ public class PlayerManager : MonoBehaviour
     public void takeDamage(int damage)
     {
         PlayEnemyDamageSound();
-        health -= damage;
+
+        if (Shield.activeSelf == false) //Individual Improvement
+        {
+            health -= damage;
+        }
+
         setHealthBar();
 
         if (health <= 0)
@@ -118,6 +169,15 @@ public class PlayerManager : MonoBehaviour
     {
         gameoverimage.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    public void Defend() //Individual Improvement
+    {
+        Shield.SetActive(true);
+        ShieldActive = true;
+        ShieldCoolDownActive = false;
+        ShieldTimer = 0f;
+        shieldBar.value = 1f;
     }
 
 }
