@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class enemyManager : MonoBehaviour
@@ -7,19 +8,14 @@ public class enemyManager : MonoBehaviour
     public static int enemyDamage = 1;
     private Animator animator;
     PlayerManager playerManager;
-    
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Rigidbody2D rb;
+
+    
     void Start()
     {       
         health = enemyMaxHealth;
         animator = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D col)

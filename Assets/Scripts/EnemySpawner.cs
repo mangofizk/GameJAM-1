@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -9,34 +10,35 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] public Vector2 spawnrange = new Vector2(10f, 10f);
 
     private int[] waves = {1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 8};
-    private int enemyCount = 0;
-    private int maxEnemies = 10;
-    private int totalEnemiesSpawned = 0;
-    private int maxTotalEnemies = 50;
+    
+
+    public EnemyPool EnemyPool;
 
     void Start()
     {
         StartCoroutine(spawnEnemies());
     }
-     
     
+     
     private IEnumerator spawnEnemies()
     {
-    Vector2 position2D;
-       for (int i = 0; i < waves.Length; i++)
-        {
-            position2D = new Vector2(transform.position.x, transform.position.y);
-            for (int e = 0; e < waves[i]; e++)
-            {
-                Instantiate(enemyPrefab, position2D + Random.insideUnitCircle * spawnrange, Quaternion.identity);
-            }
-            yield return new WaitForSeconds(spawnInterval);
-        }
-        
+        Vector2 position2D;
 
-        {
-        
-        
-        }
+            for (int i = 0; i < waves.Length; i++)
+            {
+                position2D = transform.position;
+    
+                for (int e = 0; e < waves[i]; e++)
+                {
+                GameObject enemy = EnemyPool.GetEnemy();
+                enemy.transform.position = position2D + Random.insideUnitCircle * spawnrange;
+                enemy.transform.rotation = Quaternion.identity;
+                }
+        yield return new WaitForSeconds(spawnInterval);
+            }
     }
+
+       
+
+
 }
