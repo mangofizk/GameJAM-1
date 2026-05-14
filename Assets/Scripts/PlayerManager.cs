@@ -40,6 +40,8 @@ public class PlayerManager : MonoBehaviour
 
         setHealthBar();
         animator = GetComponent<Animator>();
+        BlastScript = GetComponent<BigBumboBlast>();
+        
     }
 
     // Update is called once per frame

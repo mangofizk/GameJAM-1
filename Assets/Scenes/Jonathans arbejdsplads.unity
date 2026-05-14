@@ -1732,6 +1732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2180312425331659693, guid: d8a5e0732018e69479e906b915ccb3d7, type: 3}
   spawnrange: {x: 3, y: 2}
+  noWaves: 0
 --- !u!114 &695997926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1746,6 +1747,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evilMaxHealth: 100
   evilDeathSound: {fileID: 8300000, guid: 0aa6fb816ae913746a37b73c4f136bb6, type: 3}
+  enemySpawner: {fileID: 695997925}
+  player: {fileID: 1775223540}
+  NextSceneIndex: 4
+  EvilAttackDamage: 5
   evilHealthBar: {fileID: 1193087049}
 --- !u!212 &695997927
 SpriteRenderer:
@@ -5150,6 +5155,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759191508}
   m_CullTransparentMesh: 1
+--- !u!1 &1775223540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3874726320043596560, guid: 1396d083a735ab94399e661bd05e2a37, type: 3}
+  m_PrefabInstance: {fileID: 1979740380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1808217920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5548,7 +5558,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 368861353190994622, guid: 1396d083a735ab94399e661bd05e2a37, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460178503311709730, guid: 1396d083a735ab94399e661bd05e2a37, type: 3}
       propertyPath: m_LocalPosition.x

@@ -4449,6 +4449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6212043436579437808, guid: 82bb0c0db78472a4fa43c0d82c77fcff, type: 3}
   spawnrange: {x: 3, y: 2}
+  noWaves: 0
 --- !u!114 &1682261139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4463,6 +4464,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evilMaxHealth: 100
   evilDeathSound: {fileID: 8300000, guid: 0aa6fb816ae913746a37b73c4f136bb6, type: 3}
+  enemySpawner: {fileID: 0}
+  player: {fileID: 0}
+  NextSceneIndex: 5
+  EvilAttackDamage: 0
   evilHealthBar: {fileID: 1502405603}
 --- !u!95 &1682261140
 Animator:

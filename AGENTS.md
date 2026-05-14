@@ -2,13 +2,13 @@
 - Project name: GameJAM-1
 - Unity version: Unity 6000.0.57f1
 - Active scene:
-  - Name: Jonathans arbejdsplads
+  - Name: StartScene
   - Tags:
     - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Enemy
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Water, UI
 - Active game object:
-  - Name: Money text
+  - Name: Canvas
   - Tag: Untagged
   - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

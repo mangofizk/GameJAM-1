@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: 6aaaacf492c2c424d90ec9256da32e5a
+  - enabled: 1
+    path: Assets/Scenes/Jonathans arbejdsplads.unity
+    guid: 2f6524ecef3fa154bb03d213254ec2aa
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

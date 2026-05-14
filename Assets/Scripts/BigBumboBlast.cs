@@ -11,7 +11,7 @@ private float timer = 0f;
 private GameObject[] enemies;
 float lastTapTime = 0f;
 private Animator animator;
-    public bool blastBool;
+    public bool blastBool = false;
 
 
 
