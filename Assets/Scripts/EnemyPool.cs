@@ -5,7 +5,7 @@ public class EnemyPool : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
 
-    private ObjectPool<GameObject> evilEnemyPool;
+    public static ObjectPool<GameObject> evilEnemyPool;
 
     private void Awake()
     {

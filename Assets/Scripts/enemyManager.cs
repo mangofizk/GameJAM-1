@@ -7,6 +7,7 @@ public class enemyManager : MonoBehaviour
     private int health;
     public static int enemyDamage = 1;
     private Animator animator;
+
     PlayerManager playerManager;
 
     private Rigidbody2D rb;
@@ -23,7 +24,7 @@ public class enemyManager : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             col.GetComponent<PlayerManager>().takeDamage(enemyDamage);
-            Destroy(gameObject);
+            EnemyPool.evilEnemyPool.Release(gameObject);
         }
         
     }
@@ -36,7 +37,7 @@ public class enemyManager : MonoBehaviour
         {
             Debug.Log("drone died");
             //animator.Play("robo death");
-            Destroy(gameObject);
+            EnemyPool.evilEnemyPool.Release(gameObject);
         }
     }
 }
