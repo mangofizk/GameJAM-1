@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UpgradeScript : MonoBehaviour
 {
-    public static int upgradeCostFireRate = 5;
-    public static int upgradeCostHealth = 7;
-    public static int upgradeCostDamage = 7;
-    public static int upgradeCostLLuck = 10;
-    public static int upgradeCostMoneyIncreaseRate = 5;
+    public static int upgradeCostFireRate;
+    public static int upgradeCostHealth;
+    public static int upgradeCostDamage;
+    public static int upgradeCostLLuck;
+    public static int upgradeCostMoneyIncreaseRate;
     public float fireRateReduction = 0.1f;
     public float healthIncrease = 10f;
     public Button upgradeButtonFireRate;
@@ -17,14 +17,23 @@ public class UpgradeScript : MonoBehaviour
     public Button upgradeButtonDamage;
     public Button upgradeButtonMoneyIncreaseRate;
     public Button upgradeButtonLuck;
-    private int upgradeCountFireRate = 0;
-    private int upgradeCountHealth = 0;
-    private int upgradeCountDamage = 0;
-    private int upgradeCountMoneyIncreaseRate = 0;
+    private int upgradeCountFireRate;
+    private int upgradeCountHealth;
+    private int upgradeCountDamage;
+    private int upgradeCountMoneyIncreaseRate;
 
 
     private void Start()
     {
+        upgradeCostFireRate = 5;
+        upgradeCostHealth = 7;
+        upgradeCostDamage = 7;
+        upgradeCostLLuck = 10;
+        upgradeCostMoneyIncreaseRate = 5;
+        upgradeCountFireRate = 0;
+        upgradeCountHealth = 0;
+        upgradeCountDamage = 0;
+        upgradeCountMoneyIncreaseRate = 0;
         upgradeButtonFireRate.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostFireRate.ToString();
         upgradeButtonHealth.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostHealth.ToString();
         upgradeButtonDamage.GetComponentInChildren<TextMeshProUGUI>().text = upgradeCostDamage.ToString();
